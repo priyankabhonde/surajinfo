@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Management System</title>
+<link rel="stylesheet" type="text/css" href="f1.css">
+</head>
+<body>
+
+	<div class="container">
+		<h1>Employee Management System</h1>
+		<hr>
+		<h2>Update Employee</h2>
+		<form action="#" th:action="@{/saveEmployee}" th:object="${employee}"
+			method="Post">
+			<input type="text" th:field="*{Id}"> <br> <br> <input
+				type="text" th:field="*{firstName}"> <br> <br> <input
+				type="text" th:field="*{lastName}"> <br> <br> <input
+				type="text" th:field="*{email}"> <br> <br> <input
+				type="text" th:field="*{mobileNumber}"> <br> <br>
+			<input type="text" th:field="*{gender}"> <br> <br>
+			<input type="text" th:field="*{salary}"> <br> <br>
+			<button type="submit">Update Employee</button>
+		</form>
+		<hr>
+		<a th:href="@{/}"> Back to Employee List </a>
+	</div>
+</body>
+</html>
